@@ -14,6 +14,10 @@ void insertion (int *v, int size)
 	{
 		key = v[j];
 		i = j - 1;
+		/*
+		 * walks through the array until it finds the number
+		 * which is less than key
+		*/
 		while (i >= 0 && v[i] > key)
 		{
 			v[i + 1] = v[i];
