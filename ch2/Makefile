@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g
 headers = sort.h
-objects = insertion.o
+objects = insertion.o merge.o sort.o
 
 .c.o:
 	$(CC) $(CFLAGS) -c $<
@@ -14,4 +14,4 @@ sort-test: $(objects) sort-test.o
 $(objects): $(headers)
 
 clean:
-	rm sort-test *.o
+	rm $(objects) sort-test sort-test.o

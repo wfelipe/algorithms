@@ -7,11 +7,9 @@ int main (int argc, char **argv)
 	int size = 6;
 	int i;
 
-	insertion (v, size);
-
-	for (i = 0; i < size; i++)
-		printf ("%d ", v[i]);
-	printf ("\n");
+	print_array (v, size);
+	merge (v, size);
+	print_array (v, size);
 	
 	return 0;
 }
