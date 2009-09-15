@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g
 headers = sort.h
-objects = insertion.o merge.o sort.o
+objects = insertion.o merge.o sort.o bubble.o
 
 .c.o:
 	$(CC) $(CFLAGS) -c $<

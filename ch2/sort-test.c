@@ -8,7 +8,7 @@ int main (int argc, char **argv)
 	int i;
 
 	print_array (v, size);
-	merge (v, size);
+	bubblesort_higher (v, size);
 	print_array (v, size);
 	
 	return 0;
