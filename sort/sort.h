@@ -25,3 +25,11 @@ int heap_right (int i);
 void heap_max_heapify (int *v, int size, int i);
 void heap_build_max_heap (int *v, int size);
 void heapsort (int *v, int size);
+
+/* heap sort for priority queue */
+struct vector
+{
+	int *v;
+	int size;
+};
+int heap_extract_max (struct vector *v);
