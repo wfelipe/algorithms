@@ -14,15 +14,15 @@ void heap_max_heapify (int *v, int size, int i)
 	l = HEAP_LEFT (i);
 	r = HEAP_RIGHT (i);
 
-	if (l <= size - 1 && v[l] > v[i])
+	if (l < size && v[l] > v[i])
 		largest = l;
 	else
 		largest = i;
-	if (r <= size - 1 && v[r] > v[largest])
+	if (r < size && v[r] > v[largest])
 		largest = r;
 	if (largest != i)
 	{
-		swap (v, r, largest);
+		swap (v, i, largest);
 		heap_max_heapify (v, size, largest);
 	}
 }
@@ -39,10 +39,10 @@ void heapsort (int *v, int size)
 	int i;
 
 	heap_build_max_heap (v, size);
-	for (i = size - 1; i > 1; i++)
+	for (i = size - 1; i > 0; i--)
 	{
 		swap (v, 0, i);
 		size--;
-		heap_max_heapify (v, size, 1);
+		heap_max_heapify (v, size, 0);
 	}
 }
