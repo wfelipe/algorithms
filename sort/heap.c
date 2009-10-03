@@ -30,7 +30,7 @@ void heap_max_heapify (int *v, int size, int i)
 void heap_build_max_heap (int *v, int size)
 {
 	int i;
-	for (i = size/2; i > 0; i--)
+	for (i = (size -1)/2; i > 0; i--)
 		heap_max_heapify (v, size, i);
 }
 
