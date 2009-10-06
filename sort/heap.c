@@ -48,6 +48,11 @@ void heapsort (int *v, int size)
 }
 
 /* priority queue */
+int heap_maximum (struct vector *v)
+{
+	return v->v[0];
+}
+
 int heap_extract_max (struct vector *v)
 {
 	int max;
@@ -61,4 +66,19 @@ int heap_extract_max (struct vector *v)
 	heap_max_heapify (v->v, v->size, 0);
 
 	return max;
+}
+
+void heap_increase_key (struct vector *v, int i, int key)
+{
+	if (key < v->v[i])
+		return;
+
+	v->v[i] = key;
+
+	while (i > 1 && v->v[HEAP_PARENT(i)] < v->v[i])
+	{
+		swap (v->v, i, HEAP_PARENT(i));
+		i = HEAP_PARENT(i);
+	}
+
 }
