@@ -1,6 +1,6 @@
 #include "sort.h"
 
-void insertion (int *v, int size)
+void insertion(int *v, int size)
 {
 	int i, j;
 	int key;
@@ -8,18 +8,17 @@ void insertion (int *v, int size)
 	/* just sort arrays with size greater than 2,
 	 * arrays with size 1 are already sorted (trivial)
 	 */
-	if (size < 2) return;
+	if (size < 2)
+		return;
 
-	for	(j = 1; j < size; j++)
-	{
+	for (j = 1; j < size; j++) {
 		key = v[j];
 		i = j - 1;
 		/*
 		 * walks through the array until it finds the number
 		 * which is less than key
-		*/
-		while (i >= 0 && v[i] > key)
-		{
+		 */
+		while (i >= 0 && v[i] > key) {
 			v[i + 1] = v[i];
 			i--;
 		}

@@ -33,3 +33,8 @@ struct vector
 	int size;
 };
 int heap_extract_max (struct vector *v);
+
+/* quicksort */
+void quicksort (int *v, int size);
+void quicksort_real (int *v, int p, int r);
+int quicksort_partition (int *v, int p, int r);
