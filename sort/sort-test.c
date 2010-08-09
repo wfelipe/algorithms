@@ -2,6 +2,7 @@
 #include <stdio.h>
 /* to use free() */
 #include <stdlib.h>
+
 #include "sort.h"
 
 int main(int argc, char **argv)
@@ -15,10 +16,6 @@ int main(int argc, char **argv)
 	int *c;
 	int size = 8;
 	int i;
-	struct vector ve = {
-		.v = v,
-		.size = size,
-	};
 
 	printf("original array\n");
 	print_array(v, size);
